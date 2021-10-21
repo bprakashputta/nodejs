@@ -16,7 +16,7 @@ module.exports = params =>{
         request.session.visitcount += 1;
         console.log(`Number of visits: ${request.session.visitcount}`);
 
-        response.render('pages/index', {pageTitle: "Bhanu"});
+        response.render('layout', {pageTitle: "Bhanu", template: "index"});
     });
 
     router.use('/speakers', speakerRouter(params));
